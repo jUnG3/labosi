@@ -1,0 +1,71 @@
+﻿<!doctype html>
+	<head>
+		<title>Pacijenti</title>
+		<script src="../js/jquery.js"></script>
+		<link href="../css/bootstrap.min.css" rel="stylesheet"></link>
+		<link href="../css/dashboard.css" rel="stylesheet"></link>
+		<link href="//cdn.datatables.net/1.10.0/css/jquery.dataTables.css"></link>
+	</head>
+	<body onload="jelLogiran();">
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Labosi d.o.o.</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li id="korisnik"><a href="#"></a></li>            
+          </ul>
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search...">
+          </form>
+		  <form class="navbar-form navbar-right" action="../php/controller.php?f=logout" method="POST">
+            <button class="btn btn-lg btn-primary btn-block" id="bttnLogout" type="submit">Odjavi se</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-3 col-md-2 sidebar">
+				<ul class="nav nav-sidebar">
+					<li class="active"><a href="podaci.html">Životopis</a></li>           
+					<li class="active"><a href="pacijenti.html">Pacijenti</a></li>           
+					<li class="active"><a href="../pdf/pdfCreate.php">Slika</a></li>           
+					<li class="active"><a href="pretraga.html">Pretraga</a></li>           
+				</ul>
+			</div>   
+		</div>
+	</div>
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+				<form id="formaNoviPacijent" method="post" action="../php/controller.php?f=noviPacijent">
+					<div class="form-group col-lg-4">
+						<label for="input1" name="labelImePacijent">Ime:</label> <input type="text" name="ime" id="ime" class="form-control" />
+						<label for="input2" name="labelPrezime">Prezime:</label><input type="tetx" name="prezime" id="prezime" class="form-control" />
+						<label for="input3" name="labeldatumRodjenja">Datum rođenja:</label><input type="date" name="datumR" id="datumR" class="form-control" />
+						<label for="input4" name="labelMobitel">Mobitel</label><input type="text" name="mobitel" id="mobitel" class="form-control" />
+						<label for="input5" name="labelAdresa">Adresa</label><input type="text" name="adresa" id="adresa" class="form-control" />
+						<label for="input6" name="labelMjesto">Mjesto</label><input type="text" name="mjesto" id="mjesto" class="form-control" />
+						<input type="radio" name="spol" value="M"><label for="input7" name="labelMusko">Muško</label><br>
+						<input type="radio" name="spol" value="Ž"><label for="input8" name="labelZensko">Žensko</label>
+					</div>
+					<div class="form-group col-lg-5">
+						<input type="submit" name="submitPacijenta" id="submitPacijenta" class="btn btn-primary" />
+					</div>
+				</form>
+			</div>
+
+	</body>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/pacijenti.js"></script>
+	<script src="../js/docs.js"></script>
+	<script src="../js/podaci.js"></script>
+	<script src="//cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>
+</!doctype>
