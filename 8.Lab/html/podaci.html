@@ -1,0 +1,97 @@
+﻿<!doctype html>
+	<head>
+		<title>Podaci</title>
+		<script src="../js/jquery.js"></script>
+		<link href="../css/bootstrap.min.css" rel="stylesheet"></link>
+		<link href="../css/dashboard.css" rel="stylesheet"></link>
+	</head>
+	<body>
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Labosi d.o.o.</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li id="korisnik"><a href="#"></a></li>            
+          </ul>
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search...">
+          </form>
+		  <form class="navbar-form navbar-right" action="../php/controller.php?f=logout" method="POST">
+            <button class="btn btn-lg btn-primary btn-block" id="bttnLogout" type="submit">Odjavi se</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-3 col-md-2 sidebar">
+				<ul class="nav nav-sidebar">
+					<li class="active"><a href="pacijenti.html">Pacijenti</a></li>
+					<li class="active"><a href="noviPacijent.html">Novi pacijent</a></li>					
+					<li class="active"><a href="../php/pdfCreate.php">Slika</a></li>					
+					<li class="active"><a href="pretraga.html">Pretraga</a></li>
+<li class="active"><a href="../php/pretragaPacijent.php">Pretraga pacijent</a></li>					
+				</ul>
+			</div>   
+		</div>
+	</div>
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+				<ul class="nav nav-pills">
+				  <li><a href="#osobni-podaci">Osobni podaci</a></li>
+				  <li><a href="#podaci-o-skolovanju">Podaci o školovanju</a></li>
+				  <li><a href="#znanja-i-vjestine">Znanja i vještine</a></li>
+				</ul>
+
+				<div class="page-header">
+					<a name="osobni-podaci"><h3>Osobni podaci</h3></a>
+				</div>
+				<dl class="dl-horizontal">
+				  <dt>Ime</dt>
+				  <dd>Stjepan</dd>
+				  <dt>Prezime</dt>
+				  <dd>Soldo</dd>
+				  <dt>Mjesto rođenja</dt>
+				  <dd>Posušje</dd>
+				  <dt>Datum rođenja</dt>
+				  <dd>13.travnja.1989.</dd>
+				</dl>
+				
+				<div class="page-header">	
+					<a name="podaci-o-skolovanju"><h3>Podaci o školovanju</h3></a>
+				</div>
+				<dl class="dl-horizontal">
+				  <dt>Osnovna škola</dt>
+				  <dd>Osnovna škola Ante Brune Bušića, Rakitno</dd>
+				  <dt>Srednja škola</dt>
+				  <dd>Srednja škola fra Grge Martića, Posušje</dd>
+				  <dt>Fakultet</dt>
+				  <dd>Tehničko veleučilište u Zagrebu</dd>
+				</dl>
+
+				<div class="page-header">
+					<a name="znanja-i-vjestine"><h3>Znanja i vještine</h3></a>
+				</div>
+				<dl class="dl-horizontal">
+				  <dt>Programski jezici</dt>
+				  <dd>C, C++, C#, Java, ASP.NET, PHP</dd>
+				  <dt>Grafički alati</dt>
+				  <dd>Adobe Photoshop, Adobe Illustrator</dd>
+				  <dt>Ostalo</dt>
+				  <dd>HTML, CSS, JavaScript, WordPress, Joomla, Drupal, Seditio</dd>
+				</dl>				
+			</div>
+
+	</body>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/docs.js"></script>
+	<script src="../js/podaci.js"></script>
+</!doctype>
